@@ -27,8 +27,7 @@
       <div class="navbar-end mr-4">
         <a class="navbar-item" href="#">
           Home
-        </a>
-  
+        </a> 
         <a class="navbar-item">
           Contact Us
         </a>
@@ -39,35 +38,95 @@
   <div class="columns is-desktop is-centered mt-6">
     <article class="panel is-link column is-4">
       <p class="panel-heading">
-        Search for a Movie!
+        Search for a Movie, TV Series, or Episode Name!
       </p>
-      <div class="panel-block">
-        <p class="control has-icons-left">
-          <input class="input is-link" type="text" placeholder="Search">
+      <div class="panel-block columns">
+        <div class="control column is-3 pl-0">
+          <div class="select">
+            <select>
+              <option>Any</option>
+              <option>Movie</option>
+              <option>Series</option>
+              <option>Episode</option>
+            </select>
+          </div>
+        </div>
+        <form class="control has-icons-left" id="searchForm">
+          <input class="input is-link" id="search" type="text" placeholder="Search">
           <span class="icon is-left">
             <i class="fas fa-search" aria-hidden="true"></i>
           </span>
-        </p>
+        </form>
       </div>
-        <div class="columns m-3">
-          <div class="control">
-            <div class="select">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-          <div class="control ml-1">
-            <div class="select">
-              <select>
-                <option>Select dropdown</option>
-                <option>With options</option>
-              </select>
-            </div>
-          </div>
-        </div>
     </article>
+  </div>
+  <div>
+    <div class="box mt-3 is-hidden" id="searchResults">
+      <h1 class="title is-1">Top Results</h1>
+      <div class="columns is-flex is-flex-wrap-wrap">
+        <div class="column is-narrow-desktop" data-index="0">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="1">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="2">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="3">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="4">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="5">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="6">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="7">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="8">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+        <div class="column is-narrow-desktop" data-index="9">
+          <img class="resultPoster">
+          <a class="resultTitle"></a>
+          <p class="resultYear"></p>
+          <p class="resultType"></p>
+        </div>
+      </div>
+    </div>
+    
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

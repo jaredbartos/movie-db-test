@@ -9,3 +9,17 @@
 .navbar-end {
   font-size: 150%;
 }
+
+.resultPoster {
+  height: 444px;
+  display: block;
+}
+
+.resultTitle {
+  font-size: 175%;
+}
+
+.resultYear,
+.resultType {
+  font-size: 125%;
+}
