@@ -12,8 +12,8 @@
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" id="title" href="#">
-        Whatchamacallthatmovie?
+      <a class="navbar-item" id="navbarTitle" href="./index.html">
+        <span class="icon is-large"><i class="fa-solid fa-film fa-2xl"></i></span><h1 class="title is-2">Whatchamacallthatmovie?</h1>
       </a>
   
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -24,30 +24,31 @@
     </div>
   
     <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-end mr-4">
-        <a class="navbar-item" href="#">
-          Home
-        </a> 
+  
+      <div class="navbar-end">
+        <a class="navbar-item" href="./index.html">
+          <span class="icon is-small mr-2"><i class="fa-solid fa-house fa-sm"></i></span>Home
+        </a>
+  
         <a class="navbar-item">
-          Contact Us
+          <span class="icon is-small mr-2"><i class="fa-solid fa-paper-plane fa-sm"></i></span>Contact Us
         </a>
       </div>
     </div>
   </nav>
 
-  <div class="columns is-desktop is-centered mt-6">
-    <article class="panel is-link column is-4">
+  <div class="columns is-centered mt-6">
+    <article class="panel is-link column is-half-desktop">
       <p class="panel-heading">
-        Search for a Movie, TV Series, or Episode Name!
+        Search for a Movie or TV Series!
       </p>
       <div class="panel-block columns">
-        <div class="control column is-3 pl-0">
+        <div class="control column pl-0">
           <div class="select">
             <select>
               <option>Any</option>
               <option>Movie</option>
               <option>Series</option>
-              <option>Episode</option>
             </select>
           </div>
         </div>
@@ -60,78 +61,121 @@
       </div>
     </article>
   </div>
-  <div>
-    <div class="box mt-3 is-hidden" id="searchResults">
-      <h1 class="title is-1">Top Results</h1>
-      <div class="columns is-flex is-flex-wrap-wrap">
-        <div class="column is-narrow-desktop" data-index="0">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
+
+  <div class="box mt-3 is-hidden" id="searchResults">
+    <h1 class="title is-1" id="searchHeader">Top Results</h1>
+    <div class="columns is-flex is-flex-wrap-wrap">
+      <div class="column is-narrow-desktop" id="search0" data-index="0">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search1" data-index="1">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search2" data-index="2">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search3" data-index="3">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search4" data-index="4">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search5" data-index="5">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search6" data-index="6">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search7" data-index="7">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search8" data-index="8">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+      <div class="column is-narrow-desktop" id="search9" data-index="9">
+        <img class="resultPoster">
+        <a class="resultTitle"></a>
+        <p class="resultYear"></p>
+        <p class="resultType"></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="box is-hidden" id="itemDetails">
+    <div class="container">
+      <div class="columns">
+        <div class="column" id="left">
+          <h1 class="title is-1" id="detailsTitle"></h1>
+          <img id="detailsPoster">
         </div>
-        <div class="column is-narrow-desktop" data-index="1">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="2">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="3">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="4">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="5">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="6">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="7">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="8">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
-        </div>
-        <div class="column is-narrow-desktop" data-index="9">
-          <img class="resultPoster">
-          <a class="resultTitle"></a>
-          <p class="resultYear"></p>
-          <p class="resultType"></p>
+        <div class="column" id="right">
+          <h2 class="title is-3">Rated</h2>
+          <p class="subtitle is-4" id="detailsRated"></p>
+          <br>
+          <h2 class="title is-3">Release Date</h2>
+          <p class="subtitle is-4" id="detailsReleaseDate"></p>
+          <br>
+          <h2 class="title is-3">Runtime</h2>
+          <p class="subtitle is-4" id="detailsRuntime"></p>
+          <br>
+          <h2 class="title is-3">Genre</h2>
+          <p class="subtitle is-4" id="detailsGenre"></p>
+          <br>
+          <h2 class="title is-3">Director</h2>
+          <p class="subtitle is-4" id="detailsDirector"></p>
+          <br>
+          <h2 class="title is-3">Writer</h2>
+          <p class="subtitle is-4" id="detailsWriter"></p>
+          <br>
+          <h2 class="title is-3">Actors</h2>
+          <p class="subtitle is-4" id="detailsActors"></p>
+          <br>
+          <h2 class="title is-3">Plot</h2>
+          <p class="subtitle is-4" id="detailsPlot"></p>
+          <br>
+          <h2 class="title is-3">Awards</h2>
+          <p class="subtitle is-4" id="detailsAwards"></p>
+          <br>
+          <h2 class="title is-3">Box Office</h2>
+          <p class="subtitle is-4" id="detailsBoxOffice"></p>
+          <h2 class="title is-3"></h2>
+          <p class="subtitle is-4" id="detailsRatings"></p>
         </div>
       </div>
     </div>
-    
   </div>
 
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://kit.fontawesome.com/7229f2fb74.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@vizuaalog/bulmajs@0.12.2/dist/bulma.min.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 </html>

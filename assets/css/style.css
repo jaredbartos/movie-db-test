@@ -1,8 +1,4 @@
-#title {
-  font-size: 300%;
-}
-
-#title:hover {
+#navbarTitle:hover {
   color: black;
 }
 
@@ -22,4 +18,99 @@
 .resultYear,
 .resultType {
   font-size: 125%;
+}
+
+@keyframes reveal-bottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes reveal-top {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#search0,
+#search1,
+#search2,
+#search3,
+#search4,
+#search5,
+#search6,
+#search7,
+#search8,
+#search9,
+#searchHeader {
+  opacity: 0;
+  animation-name: reveal-bottom;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+#search0 {
+  animation-delay: 0.1s;
+}
+
+#search1 {
+  animation-delay: 0.2s;
+}
+
+#search2 {
+  animation-delay: 0.3s;
+}
+
+#search3 {
+  animation-delay: 0.4s;
+}
+
+#search4 {
+  animation-delay: 0.5s;
+}
+
+#search5 {
+  animation-delay: 0.6s;
+}
+
+#search6 {
+  animation-delay: 0.7s;
+}
+
+#search7 {
+  animation-delay: 0.8s;
+}
+
+#search8 {
+  animation-delay: 0.9s;
+}
+
+#search9 {
+  animation-delay: 1s;
+}
+
+#left,
+#right {
+  opacity: 0;
+  animation-name: reveal-top;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+}
+
+#right {
+  animation-delay: 0.3s;
+}
+
+#detailsYear {
+  animation-delay: 2s;
 }
