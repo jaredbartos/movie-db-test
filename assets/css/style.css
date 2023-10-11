@@ -12,6 +12,7 @@
 }
 
 .resultTitle {
+  color: black;
   font-size: 175%;
 }
 
@@ -20,7 +21,7 @@
   font-size: 125%;
 }
 
-@keyframes reveal-bottom {
+@keyframes reveal-from-bottom {
   from {
     opacity: 0;
     transform: translateY(30px);
@@ -31,7 +32,7 @@
   }
 }
 
-@keyframes reveal-top {
+@keyframes reveal-from-left {
   from {
     opacity: 0;
     transform: translateX(-50px);
@@ -54,7 +55,7 @@
 #search9,
 #searchHeader {
   opacity: 0;
-  animation-name: reveal-bottom;
+  animation-name: reveal-from-bottom;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
 }
@@ -102,15 +103,21 @@
 #left,
 #right {
   opacity: 0;
-  animation-name: reveal-top;
+  animation-name: reveal-from-left;
   animation-duration: 0.8s;
   animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 }
 
 #right {
-  animation-delay: 0.3s;
+  animation-delay: 0.5s;
 }
 
-#detailsYear {
-  animation-delay: 2s;
+.result:hover {
+  translate: 10px 10px;
+  cursor: pointer;
+}
+
+.result {
+  transition: translate 0.5s;
 }

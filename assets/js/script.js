@@ -2,13 +2,15 @@ $(document).ready(function() {
   var omdbAPIKey = "9610d141";
   var searchBar = $("#search");
   var searchForm = $("#searchForm");
+  var selectEl = $("select");
 
   var populateSearchResults = function(data) {
     $("#searchResults").removeClass("is-hidden");
     for (var i = 0; i < data.Search.length; i++) {
       $("div[data-index]").each(function() {
         if (Number($(this).attr("data-index")) === i) {
-          $(this).children("a.resultTitle").text(data.Search[i].Title);
+          $(this).removeClass("is-hidden");
+          $(this).children("p.resultTitle").text(data.Search[i].Title);
           $(this).children("p.resultYear").text(data.Search[i].Year);
           $(this).children("p.resultType").text(data.Search[i].Type);
           if (data.Search[i].Poster !== "N/A") {
@@ -42,7 +44,11 @@ $(document).ready(function() {
   };
 
   var searchAPI = function(searchInput) {
-    var searchURL = "https://www.omdbapi.com/?apikey=" + omdbAPIKey + "&s=" + searchInput;
+    if (selectEl.val() === "Any") {
+      var searchURL = "https://www.omdbapi.com/?apikey=" + omdbAPIKey + "&s=" + searchInput;
+    } else {
+      var searchURL = "https://www.omdbapi.com/?apikey=" + omdbAPIKey + "&s=" + searchInput + "&type=" + selectEl.val();
+    }
 
     fetch(searchURL)
       .then(function(response) {
@@ -71,11 +77,12 @@ $(document).ready(function() {
     searchBar.val("");
     $("#searchResults").addClass("is-hidden");
     $("#itemDetails").addClass("is-hidden");
+    $("div[data-index").addClass("is-hidden");
   });
 
-  $(".resultTitle").on("click", function(event) {
+  $(".result").on("click", function(event) {
     event.preventDefault();
-    fetchDetails($(this).parent().attr("data-imdb-id"))
+    fetchDetails($(this).attr("data-imdb-id"))
   });
 
 });
